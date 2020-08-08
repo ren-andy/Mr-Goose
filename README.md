@@ -1,2 +1,2 @@
-# mr-goose, home monitor 
+# cmd-goose, home monitor 
 Command line IoT project built on a Raspberry Pi 3B+
