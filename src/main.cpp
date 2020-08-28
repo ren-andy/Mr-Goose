@@ -22,27 +22,23 @@ int main() {
     std::string command; 
     dht22 temp;
     PIR pir;  
-    piezo buzz;
+    //piezo buzz;
     // variable to save the location of song
 
-    while(command != "exit") { 
-        if(digitalRead(TEMP_ONLY_PIN) == HIGH) {
-            temp.read_dht_data();
-        } else if(digitalRead(ALL_PIN == HIGH)) {
-            temp.read_dht_data();
-            // run in parallel here? 
+    // switch infinite while loop 
+    while(1) { 
+        //std::cin >> command; 
+        //for temperature reading
+        temp.read_dht_data();
+        if(digitalRead(PIR_ON_PIN) == HIGH) { // detects if sliding switch has PIR sensor ON  
             pir.sense_surrounding(); 
         }
 
         if(digitalRead(SONG_BUTTON_PIN) == HIGH) {
-            buzz.star_wars_opening(); 
+            //buzz.star_wars_opening(); 
         }
+
     }
 
-
-    // sliding switch implementation 
-    // 1 PIR sensor only  
-    // 2 Both temp and PIR 
-    // 3 temp 
     return 0; 
 }

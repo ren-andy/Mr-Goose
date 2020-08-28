@@ -3,9 +3,8 @@
 #define PIR_PIN 2
 #define PB_PIN 3
 
-// Sliding switch pins 
-#define TEMP_ONLY_PIN 8
-#define ALL_PIN 9
+// // Sliding switch pins 
+#define PIR_ON_PIN 25
 
 // song Button 
 #define SONG_BUTTON_PIN 7
